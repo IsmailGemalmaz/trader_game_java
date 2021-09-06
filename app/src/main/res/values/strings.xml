@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <!-- Welcome  -->
+
+    <string name="welcome_login_message">Oyun puanların ile üçbinin üzerinde kripto para al sat.</string>
+    <string name="welcome_login_message_two">Oyun oynayarak trade etmeyi öğren.</string>
+    <string name="welcome_activity_sign_in_button">Giriş Yap</string>
+
+
+    <!-- Register  -->
+    <string name="welcome_register_activity_firstName">Adınız</string>
+    <string name="welcome_register_activity_secondName">Soyadınız</string>
+    <string name="welcome_register_activity_email">E-Posta Adresiniz</string>
+    <string name="welcome_register_activity_password">Şifreniz</string>
+    <string name="welcome_register_activity_againpassword">Şifre Tekrar</string>
+    <string name="welcome_register_activity_btn">KAYDOL</string>
+
+    !-- SiginIn  -->
+    <string name="welcome_SiginIn_activity_btn">Giriş Yap</string>
+    <string name="welcome_SiginIn_activity_email">E-Posta Adresiniz</string>
+    <string name="welcome_SiginIn_activity_password">Şifreniz</string>
+    <string name="layout_get_information">Kazancına göre; belirlenmiş algoritmada(her $100 kazancında 10 puan portföyüne eklenir;her $100 kaybettiğinde portföyünden 10 puan eksilir ), kripto para dünyasında al sat yaparak  puanları topla ilk sıralara yerleş ve bunları yaparaken öğren,piyasadan haberdar ol ,unutma bu sadece biir oyun.. </string>
+
+
+    <string name="stock_details_list_item_name">Name</string>
+   <string name="stock_details_list_item_value">Value</string>
+
+
+
+</resources>

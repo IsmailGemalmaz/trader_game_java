@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/welcome_activity_sign_in_button"
+        android:layout_marginTop="120dp"
+        android:textColor="@color/login_text"
+        />
+
+
+
+    <LinearLayout
+        android:id="@+id/edit_layout"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="320dp"
+
+        >
+        <EditText
+            android:id="@+id/siginInEmail"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="textCapWords"
+            android:background="@drawable/shape_login_activity_edit_text"
+            android:hint="@string/welcome_SiginIn_activity_email"
+            android:fontFamily="serif-monospace"
+            android:textColor="@color/black"
+            android:paddingLeft="12dp"
+
+            />
+
+        <EditText
+            android:id="@+id/siginInPassword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="textPassword"
+            android:background="@drawable/shape_login_activity_edit_text"
+            android:hint="@string/welcome_SiginIn_activity_password"
+            android:textColor="@color/black"
+            android:fontFamily="serif-monospace"
+            android:paddingLeft="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="70dp"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/siginInBtn"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/edit_layout"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/selector_secondary_button"
+        android:text="@string/welcome_SiginIn_activity_btn"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="190dp"
+        >
+
+        <TextView
+            android:id="@+id/sifinInForgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/login_text"
+            android:text="Şifremi Unuttum"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Hesabınız Yoksa"
+                android:textSize="18dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="sans-serif-black"
+                />
+
+            <TextView
+                android:id="@+id/signInActivityRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                android:text=" Üye Olun.."
+                android:textSize="18dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="sans-serif-black"
+
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgRegister"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:src="@drawable/img_welcome_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        />
+</RelativeLayout>

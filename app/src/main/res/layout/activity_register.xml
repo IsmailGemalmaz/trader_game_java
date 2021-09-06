@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgRegister"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:src="@drawable/img_welcome_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        />
+
+    <TextView
+        android:id="@+id/registerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_register_activity_btn"
+        android:layout_centerHorizontal="true"
+        android:textSize="35dp"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginTop="150dp"
+        android:textColor="@color/login_text"
+        />
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="300dp"
+        android:layout_centerHorizontal="true"
+        >
+        <EditText
+           android:id="@+id/registerFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="textCapWords"
+            android:background="@drawable/shape_login_activity_edit_text"
+            android:hint="@string/welcome_register_activity_firstName"
+            android:fontFamily="serif-monospace"
+            android:paddingLeft="12dp"
+            />
+        
+        <EditText
+            android:id="@+id/registerSecondName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="textCapWords"
+            android:background="@drawable/shape_login_activity_edit_text"
+            android:hint="@string/welcome_register_activity_secondName"
+            android:fontFamily="serif-monospace"
+            android:paddingLeft="12dp"
+            android:layout_marginTop="15dp"
+            />
+
+        <EditText
+            android:id="@+id/registerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/shape_login_activity_edit_text"
+            android:hint="@string/welcome_register_activity_email"
+            android:fontFamily="serif-monospace"
+            android:paddingLeft="12dp"
+            android:layout_marginTop="15dp"
+            />
+
+        <EditText
+            android:id="@+id/registerPassword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="textPassword"
+            android:background="@drawable/shape_login_activity_edit_text"
+            android:hint="@string/welcome_register_activity_password"
+            android:fontFamily="serif-monospace"
+            android:paddingLeft="12dp"
+            android:layout_marginTop="15dp"
+            />
+
+        <EditText
+            android:id="@+id/registerAgainPassword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="textPassword"
+            android:background="@drawable/shape_login_activity_edit_text"
+            android:hint="@string/welcome_register_activity_againpassword"
+            android:fontFamily="serif-monospace"
+            android:paddingLeft="12dp"
+            android:layout_marginTop="15dp"
+            />
+        
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="170dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/selector_secondary_button"
+        android:text="@string/welcome_register_activity_btn"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+
+        />
+
+
+
+
+</RelativeLayout>

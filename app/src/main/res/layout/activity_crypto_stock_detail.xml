@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <Button
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_buy_button"
+        android:text="Satın Al"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-black"
+        android:textSize="16dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="20dp"
+        />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/ibDetailBack"
+                    android:layout_width="20dp"
+                    android:layout_height="17dp"
+                    android:background="@drawable/img_ib_back"
+                    android:layout_margin="10dp"
+                    />
+                <ImageButton
+                    android:id="@+id/ibStockDetailFavorite"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/img_favori"
+                    android:layout_margin="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvCoinName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="CoinName"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/white"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/primary" />
+
+            <TextView
+                android:id="@+id/tvUpdateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="13 Ağustos 2021 ,15:10:20"
+                android:textColor="@color/white"
+                />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Coin Detayları"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/primary" />
+
+            <com.example.myapplication.view.layout.CryptoDetailListItemLayout
+                android:id="@+id/cDlCurrrency"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+            <com.example.myapplication.view.layout.CryptoDetailListItemLayout
+                android:id="@+id/cDlRank"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+            <com.example.myapplication.view.layout.CryptoDetailListItemLayout
+                android:id="@+id/cDlPrice"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+            <com.example.myapplication.view.layout.CryptoDetailListItemLayout
+                android:id="@+id/cDlMarketCap"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+            <com.example.myapplication.view.layout.CryptoDetailListItemLayout
+                android:id="@+id/cDlHigh"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+            <com.example.myapplication.view.layout.CryptoDetailListItemLayout
+                android:id="@+id/cDlHighTimesTamp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+            <com.example.myapplication.view.layout.CryptoDetailListItemLayout
+                android:id="@+id/cdlMarketCapDominance"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+            <com.example.myapplication.view.layout.CryptoDetailListItemLayout
+                android:id="@+id/cdlMaxSupply"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+            <com.example.myapplication.view.layout.CryptoDetailListItemLayout
+                android:id="@+id/cDlCirculatingSupply"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</FrameLayout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/primary"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="30dp"
+        >
+
+       <LinearLayout
+           android:id="@+id/llGetInformation"
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:orientation="vertical"
+           android:background="@drawable/shape_view_frame"
+           >
+
+           <ImageView
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+              android:layout_gravity="center"
+               android:layout_marginTop="15dp"
+               android:src="@drawable/img_info"
+               />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Bilgi Edin"
+               android:layout_marginTop="5dp"
+               android:layout_gravity="center"
+               android:textColor="@color/white"
+
+               />
+       </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llLearnVideo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:background="@drawable/shape_view_frame"
+            android:layout_marginLeft="20dp"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/img_learn"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Öğretici Video"
+                android:textSize="12dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llComments"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:background="@drawable/shape_view_frame"
+            android:layout_marginLeft="20dp"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/img_comment"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yorumlar"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llBaseClick"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/shape_view_frame"
+        android:padding="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="40dp"
+        android:orientation="horizontal"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/llOparationPast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+             android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/img_oparation"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="İşlem Geçmişi"
+                android:layout_marginTop="5dp"
+                android:textSize="11dp"
+                android:textColor="@color/white"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/img_favori"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorilerim"
+                android:layout_marginTop="5dp"
+                android:textSize="13dp"
+                android:textColor="@color/white"
+
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llNatification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/img_natification"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bildirimler"
+                android:layout_marginTop="5dp"
+                android:textSize="13dp"
+                android:textColor="@color/white"
+
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llDepositMany"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/shape_view_frame"
+        android:padding="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="40dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$"
+            android:layout_gravity="center"
+            android:textSize="50dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="15dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PARA YATIR"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="15dp"
+            />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/img_next"
+                android:layout_gravity="center"
+                android:layout_marginLeft="80dp"
+                />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_gravity="center"
+        android:layout_width="380dp"
+        android:layout_height="2dp"
+        android:background="@drawable/shape_view_line"
+        android:layout_marginTop="40dp"
+        />
+
+
+    <View
+        android:layout_gravity="center"
+        android:layout_width="380dp"
+        android:layout_height="2dp"
+        android:background="@drawable/shape_view_line"
+        android:layout_marginTop="220dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:src="@drawable/img_welcome_logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        />
+</LinearLayout>

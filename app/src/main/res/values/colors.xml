@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Theme -->
+    <color name="transparent">#00FFFFFF</color>
+    <color name="base_window_background">#2E2E2E</color>
+    <color name="window_background">#2E2E2E</color>
+    <color name="primary">#04C290</color>
+    <color name="primary_dark">#000000</color>
+    <color name="primary_light">#75CAB4</color>
+    <color name="accent">#ACDC17</color>
+    <color name="primary_dark_text">#ABABAB</color>
+    <color name="secondary_dark_text">#2E83C4</color>
+    <color name="primary_light_text">#FFFFFF</color>
+    <color name="secondary_light_text">#C5C5C5</color>
+    <color name="icon_light">#FFFFFF</color>
+    <color name="icon_dark">#2E83C4</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="progress">@color/accent</color>
+    <color name="red">#FF2641</color>
+    <color name="green">#00C446</color>
+    <color name="login_text">#59FFFFFF</color>
+    <color name="login_edit_text">#B7FFFFFF</color>
+    <color name="bottom_tab_view_selected">#54606060</color>
+    <color name="bottom_tab_view_unselected">#FF2E2E2E</color>
+</resources>

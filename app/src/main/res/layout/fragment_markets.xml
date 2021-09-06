@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/primary"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/llUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        >
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/shape_profile_view"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="15dp"
+            android:text="İsmail Gemalmaz"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/white"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@+id/llUser"
+       android:layout_marginBottom="-50dp"
+        android:layout_marginLeft="15dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:text="BAKİYE : "
+            />
+
+        <TextView
+            android:id="@+id/tvUserPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:text= " $ 2000"
+            />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/primary"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignTop="@+id/etSearch"
+        android:layout_marginTop="-20dp"
+        />
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="370dp"
+        android:layout_height="40dp"
+        android:background="@drawable/shape_view_frame"
+        android:layout_marginTop="210dp"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="38dp"
+        android:hint="Ara..."
+        android:textColorHint="@color/white"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+
+        />
+    <ImageView
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:background="@drawable/img_search"
+        android:layout_alignBottom="@+id/etSearch"
+        android:layout_marginLeft="28dp"
+        android:layout_marginBottom="5dp"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCryptoİnfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="270dp"
+        />
+</RelativeLayout>
