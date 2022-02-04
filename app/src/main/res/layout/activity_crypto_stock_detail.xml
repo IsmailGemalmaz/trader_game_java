@@ -6,6 +6,7 @@
     android:orientation="vertical"
     >
     <Button
+        android:id="@+id/btnDetailBuy"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:background="@drawable/selector_buy_button"

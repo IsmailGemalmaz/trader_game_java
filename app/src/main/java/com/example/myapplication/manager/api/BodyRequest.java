@@ -10,12 +10,19 @@ import com.android.volley.toolbox.HttpHeaderParser;
 import com.example.myapplication.constant.ApiMethod;
 import com.example.myapplication.constant.ProjectSettings;
 import com.example.myapplication.helper.SecurityHelper;
+import com.example.myapplication.model.entity.CryptoFavoritesStcok;
+import com.example.myapplication.model.entity.CryptoStock;
+import com.example.myapplication.model.response.GetCryptoFavoritesResponse;
+import com.example.myapplication.model.response.GetCryptoStockResponse;
 import com.example.myapplication.utility.L;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Type;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class BodyRequest<T> extends Request<T> {
@@ -70,12 +77,18 @@ public class BodyRequest<T> extends Request<T> {
     @Override
     protected Response<T> parseNetworkResponse(NetworkResponse response) {
         try {
+            T result;
             String responseString = new String(response.data, ProjectSettings.API_DEFAULT_CHARSET);
-           // if (ProjectSettings.API_ENCRYPTION_ENABLED) {
-             //   responseString = mSecurityHelper.decrypt(responseString);
-            //}
-            L.e("API response received: " + mApiMethod + " " + responseString);
-            T result = mGson.fromJson(responseString, mResponseClass);
+            L.e("API response recapimaeived: " + mApiMethod + " " + responseString);
+            if (mResponseClass== GetCryptoFavoritesResponse.class){
+                Type type=new TypeToken<List<CryptoFavoritesStcok>>(){}.getType();
+                List<CryptoFavoritesStcok> stocks=mGson.fromJson(responseString,type);
+                GetCryptoFavoritesResponse getCryptoStockResponse=new GetCryptoFavoritesResponse();
+                getCryptoStockResponse.setStocks(stocks);
+                result=(T)getCryptoStockResponse;
+            }else{
+                result = mGson.fromJson(responseString, mResponseClass);
+            }
             return Response.success(result, HttpHeaderParser.parseCacheHeaders(response));
         } catch (Exception e) {
             return Response.error(new ParseError(e));

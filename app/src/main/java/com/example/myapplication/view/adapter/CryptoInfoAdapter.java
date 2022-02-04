@@ -29,7 +29,6 @@ public class CryptoInfoAdapter extends  RecyclerView.Adapter<CryptoInfoAdapter.V
     }
 
 
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

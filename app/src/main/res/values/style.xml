@@ -40,4 +40,14 @@
         <item name="android:textSize">15dp</item>
 
     </style>
+
+
+    <style name="EditTextHintStyle" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">20sp</item>
+        <item name="hintTextColor">@color/primary</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textColorHint">@color/primary</item>
+
+
+    </style>
 </resources>

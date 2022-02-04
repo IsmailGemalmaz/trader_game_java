@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
 
     <View
         android:layout_width="match_parent"
@@ -29,6 +29,7 @@
             />
 
         <TextView
+            android:id="@+id/tvUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="11dp"
@@ -103,10 +104,13 @@
         />
 
 
-    <androidx.recyclerview.widget.RecyclerView
+
+
+    <com.example.myapplication.view.widget.EndlessRecyclerView
         android:id="@+id/rvCryptoİnfo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="270dp"
+        tools:listitem="@layout/layout_crypto_info_list_item"
         />
 </RelativeLayout>

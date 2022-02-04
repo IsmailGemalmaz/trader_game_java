@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import com.example.myapplication.App;
 import com.example.myapplication.constant.ProjectSettings;
 import com.example.myapplication.controller.EventListener;
+import com.example.myapplication.helper.PreferenceHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +31,7 @@ public abstract class BaseUtilityActivity extends BaseTemplateActivity implement
     private static BaseTemplateActivity sActiveActivity;
     private static List<EventListener> sEventListeners;
     private static boolean sIsInForeground;
+    private PreferenceHelper mPreferenceHelper;
 
     public static boolean isInForeground() {
         return sIsInForeground;
@@ -76,6 +78,7 @@ public abstract class BaseUtilityActivity extends BaseTemplateActivity implement
         if (sEventListeners == null) {
             sEventListeners = new ArrayList<>();
         }
+        mPreferenceHelper = new PreferenceHelper(context);
         mActiveFragments = new ArrayList<>();
         sActiveActivity = this;
         mIsRunning = true;
@@ -224,6 +227,10 @@ public abstract class BaseUtilityActivity extends BaseTemplateActivity implement
                 }
             }
         });
+    }
+
+    public PreferenceHelper getPreference() {
+        return mPreferenceHelper;
     }
 
     public void setWindowBackgroundImage(int imgResId) {

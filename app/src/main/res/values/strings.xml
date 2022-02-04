@@ -16,7 +16,7 @@
     <string name="welcome_register_activity_againpassword">Şifre Tekrar</string>
     <string name="welcome_register_activity_btn">KAYDOL</string>
 
-    !-- SiginIn  -->
+    !-- SiginIn -->
     <string name="welcome_SiginIn_activity_btn">Giriş Yap</string>
     <string name="welcome_SiginIn_activity_email">E-Posta Adresiniz</string>
     <string name="welcome_SiginIn_activity_password">Şifreniz</string>
@@ -24,8 +24,15 @@
 
 
     <string name="stock_details_list_item_name">Name</string>
-   <string name="stock_details_list_item_value">Value</string>
+    <string name="stock_details_list_item_value">Value</string>
 
-
+    <string name="validation_default">Boş bırakılamaz</string>
+    <string name="validation_email">Geçerli bir e-posta adresi girin</string>
+    <string name="email_exist_error">Bu e-posta adresi kullanılmaktadır</string>
+    <string name="validation_name_min_character">Kullanıcı adı en az 3 karakter olabilir</string>
+    <string name="validation_surname_min_character">Soyadı en az 3 karakter olabilir</string>
+    <string name="validation_password_min_character">Şifre en az 6 karakter olabilir</string>
+    <string name="validation_password_again_incompatible">Şifreler uyuşmuyor</string>
+    <string name="validation_user">Böyle bir kullanıcı yok, kullanıcı oluşturun.</string>
 
 </resources>

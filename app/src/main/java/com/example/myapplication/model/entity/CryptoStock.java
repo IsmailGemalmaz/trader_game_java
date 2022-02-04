@@ -2,7 +2,7 @@ package com.example.myapplication.model.entity;
 
 import com.example.myapplication.manager.api.ApiEntity;
 
-public class CryptoStock extends ApiEntity {
+public class CryptoStock extends BaseEntity {
 
     private String currency;
     private Double price;

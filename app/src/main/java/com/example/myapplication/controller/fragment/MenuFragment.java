@@ -1,5 +1,6 @@
 package com.example.myapplication.controller.fragment;
 
+import android.content.Context;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
@@ -41,7 +42,6 @@ public class MenuFragment extends BaseFragment implements View.OnClickListener {
 
 
     private MenuTab mCurrentlySelectedMenuTab = MenuTab.HOME;
-
 
 
     @Override

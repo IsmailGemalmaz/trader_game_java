@@ -16,9 +16,5 @@ public class GetCryptoStockResponse extends BaseResponse {
         this.stocks = stocks;
     }
 
-    CryptoStock stock;
 
-    public CryptoStock getStock() {
-        return stock;
-    }
 }

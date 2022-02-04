@@ -1,10 +1,12 @@
 package com.example.myapplication.controller.base;
 
+import static android.R.id.content;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
-import android.view.View;
+
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 
@@ -19,7 +21,7 @@ public  abstract class BaseTemplateActivity extends AppCompatActivity  {
     public Context context=this;
     public BaseTemplateActivity activity=this;
 
-    @BindView(android.R.id.content)
+    @BindView(content)
     ViewGroup vgContent;
 
     private boolean mIsRecreated;

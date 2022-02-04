@@ -72,4 +72,9 @@ public  abstract class ProjectSettings {
     public static String getApiBaseUrl() {
         return IS_PROD ? API_BASE_URL_PROD : API_BASE_URL_TEST;
     }
+
+    /**
+     * Verilerin SharedPreference'a şifrelenerek kaydedilmesini belirler.
+     */
+    public static final boolean PREFERENCE_ENCRYPTION_ENABLED = true;
 }

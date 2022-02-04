@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
         android:id="@+id/imgRegister"
@@ -30,67 +30,114 @@
         android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="250dp"
         android:layout_centerHorizontal="true"
         >
-        <EditText
-           android:id="@+id/registerFirstName"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:inputType="textCapWords"
-            android:background="@drawable/shape_login_activity_edit_text"
-            android:hint="@string/welcome_register_activity_firstName"
-            android:fontFamily="serif-monospace"
-            android:paddingLeft="12dp"
-            />
-        
-        <EditText
-            android:id="@+id/registerSecondName"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:inputType="textCapWords"
-            android:background="@drawable/shape_login_activity_edit_text"
-            android:hint="@string/welcome_register_activity_secondName"
-            android:fontFamily="serif-monospace"
-            android:paddingLeft="12dp"
-            android:layout_marginTop="15dp"
-            />
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/registerFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/welcome_register_activity_firstName"
+            app:hintTextAppearance="@style/EditTextHintStyle"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:background="@drawable/shape_login_activity_edit_text"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:paddingLeft="12dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/registerLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/welcome_register_activity_secondName"
+            app:hintTextAppearance="@style/EditTextHintStyle"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:background="@drawable/shape_login_activity_edit_text"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:paddingLeft="12dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/registerEmail"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:inputType="textEmailAddress"
-            android:background="@drawable/shape_login_activity_edit_text"
+            android:layout_height="wrap_content"
             android:hint="@string/welcome_register_activity_email"
-            android:fontFamily="serif-monospace"
-            android:paddingLeft="12dp"
-            android:layout_marginTop="15dp"
-            />
+            app:hintTextAppearance="@style/EditTextHintStyle"
 
-        <EditText
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:background="@drawable/shape_login_activity_edit_text"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:paddingLeft="12dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/registerPassword"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:inputType="textPassword"
-            android:background="@drawable/shape_login_activity_edit_text"
+            android:layout_height="wrap_content"
             android:hint="@string/welcome_register_activity_password"
-            android:fontFamily="serif-monospace"
-            android:paddingLeft="12dp"
-            android:layout_marginTop="15dp"
-            />
+            app:endIconMode="password_toggle"
+            app:hintTextAppearance="@style/EditTextHintStyle"
 
-        <EditText
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_login_activity_edit_text"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:paddingLeft="12dp"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/registerAgainPassword"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:inputType="textPassword"
-            android:background="@drawable/shape_login_activity_edit_text"
+            android:layout_height="wrap_content"
             android:hint="@string/welcome_register_activity_againpassword"
-            android:fontFamily="serif-monospace"
-            android:paddingLeft="12dp"
-            android:layout_marginTop="15dp"
-            />
+            app:endIconMode="password_toggle"
+            app:hintTextAppearance="@style/EditTextHintStyle"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_login_activity_edit_text"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:paddingLeft="12dp"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
         
     </LinearLayout>
     

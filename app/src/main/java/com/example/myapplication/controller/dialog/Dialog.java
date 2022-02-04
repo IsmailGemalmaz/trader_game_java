@@ -36,7 +36,7 @@ public class Dialog  extends BaseDialog implements View.OnClickListener {
         alert.setStock(stock);
         //alert.setDetailButtonHidden(isDetailButtonHidden);
         //alert.setTransactionType(transactionType);
-        alert.show(activity);
+       alert.show(activity);
     }
 
     @Override
@@ -59,7 +59,7 @@ public class Dialog  extends BaseDialog implements View.OnClickListener {
         if(v==btnCancel){
             dismiss();
         }else if(v==btnDetail){
-            CryptoStockDetailActivity.start(activity,mStock.getName(),mStock.getId());
+            CryptoStockDetailActivity.start(activity,mStock.getCurrency(),mStock.getId());
             dismiss();
         }else if(v==btnBuy){
 
@@ -75,7 +75,6 @@ public class Dialog  extends BaseDialog implements View.OnClickListener {
         if(ApiMethod.GET_CRYPTO_STOCK==method && isSuccess){
             if(mStock !=null){
                 GetCryptoStockResponse cryptoStockResponse=(GetCryptoStockResponse) response;
-
             }
         }
     }

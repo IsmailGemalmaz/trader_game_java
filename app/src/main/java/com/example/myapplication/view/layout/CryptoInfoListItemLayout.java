@@ -1,4 +1,4 @@
-package com.example.myapplication.view.layout;
+    package com.example.myapplication.view.layout;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -16,8 +16,10 @@ import com.example.myapplication.constant.ApiMethod;
 import com.example.myapplication.controller.base.BaseActivity;
 import com.example.myapplication.controller.base.BaseApiActivity;
 import com.example.myapplication.controller.dialog.Dialog;
+import com.example.myapplication.controller.fragment.MarketsFragment;
 import com.example.myapplication.manager.api.ApiListener;
 import com.example.myapplication.model.entity.CryptoStock;
+import com.example.myapplication.model.request.AddCryptoFavoritesRequest;
 import com.example.myapplication.model.response.BaseResponse;
 import com.example.myapplication.view.widget.Toast;
 
@@ -68,9 +70,6 @@ public class CryptoInfoListItemLayout extends FrameLayout implements View.OnClic
     public void onClick(View v) {
         if(v==llCryptoItem){
             Dialog.showDialog(mActivity,mStock,-1,false);
-        }else if(v==ivFavorite){
-            Toast.info(mContext,"Favorilere Eklendi");
-
         }
     }
 
@@ -91,6 +90,8 @@ public class CryptoInfoListItemLayout extends FrameLayout implements View.OnClic
     public void onApiResponseReceive(ApiMethod method, BaseResponse response, boolean isSuccess) {
 
     }
+
+
 
 
     public void fillContent(CryptoStock stock,int position){

@@ -45,6 +45,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     @BindView(R.id.tvTitle)
     TextView tvTitle;
 
+
     private NewsFragment fragmentNews;
     private WalletFragment fragmentWallet;
     private HomeFragment fragmentHome;
@@ -161,6 +162,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         }
     }
+
+
 
     private void replaceFragment(BaseFragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();

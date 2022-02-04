@@ -5,20 +5,34 @@ import com.example.myapplication.manager.api.ContentType;
 import com.example.myapplication.manager.api.RequestType;
 import com.example.myapplication.manager.api.ResponseFormat;
 import com.example.myapplication.model.request.AddCryptoFavoritesRequest;
+import com.example.myapplication.model.request.AddCryptoWalletRequest;
+import com.example.myapplication.model.request.GetCryptoFavoritesRequest;
 import com.example.myapplication.model.request.GetCryptoStockRequest;
+import com.example.myapplication.model.request.GetCryptoWalletRequest;
 import com.example.myapplication.model.request.GetStockDetailRequest;
+import com.example.myapplication.model.request.LoginUserRequest;
+import com.example.myapplication.model.request.RegisterUserRequest;
 import com.example.myapplication.model.response.AddCryptoFavoritesResponse;
+import com.example.myapplication.model.response.BaseResponse;
+import com.example.myapplication.model.response.GetCryptoFavoritesResponse;
 import com.example.myapplication.model.response.GetCryptoStockResponse;
+import com.example.myapplication.model.response.GetCryptoWalletResponse;
 import com.example.myapplication.model.response.GetStockDetailResponse;
+import com.example.myapplication.model.response.LoginUserResponse;
 
 public enum ApiMethod {
 
     //https://api.nomics.com/v1/currencies/ticker?key=a8a3452e71305947867f9f04df8fd319
-    // Https://api.nomics.com/v1/prices?key=a8a3452e71305947867f9f04df8fd319
+    //Https://api.nomics.com/v1/prices?key=a8a3452e71305947867f9f04df8fd319
 
     GET_CRYPTO_STOCK("https://api.nomics.com/v1/currencies/ticker", GetCryptoStockRequest.class, GetCryptoStockResponse.class, Request.Method.GET, RequestType.QUERY),
     GET_DETAIL_CRYPTO_STOCK("https://api.nomics.com/v1/currencies/ticker",GetStockDetailRequest.class, GetStockDetailResponse.class, Request.Method.GET, RequestType.QUERY),
-    ADD_CRYPTO_TO_FAVORITES("http://192.168.1.49:3000/api/v1/crypto/favorites",AddCryptoFavoritesRequest.class, AddCryptoFavoritesResponse.class,Request.Method.POST,RequestType.BODY);
+    ADD_CRYPTO_TO_FAVORITES("http://192.168.0.104:3000/api/v1/crypto/favorites",AddCryptoFavoritesRequest.class, AddCryptoFavoritesResponse.class,Request.Method.POST,RequestType.BODY),
+    GET_CRYPTO_FAVORİTES("http://192.168.0.104:3000/api/v1/crypto/getfavorites", GetCryptoFavoritesRequest.class, GetCryptoFavoritesResponse.class,Request.Method.GET,RequestType.BODY),
+    ADD_CRYPTO_TO_WALLET("http://192.168.0.104:3000/api/v1/crypto/postwallet",AddCryptoWalletRequest.class,BaseResponse.class,Request.Method.POST,RequestType.BODY),
+    GET_CRYPTO_WALLET("http://192.168.0.104:3000/api/v1/crypto/get", GetCryptoWalletRequest.class, GetCryptoWalletResponse.class,Request.Method.GET,RequestType.BODY),
+    REGISTER_USER("http://192.168.0.104:3000/api/v1/user/register", RegisterUserRequest.class,BaseResponse.class,Request.Method.POST,RequestType.BODY),
+    LOGIN_USER("http://192.168.0.104:3000/api/v1/user/login", LoginUserRequest.class, LoginUserResponse.class,Request.Method.POST,RequestType.BODY);
 
     private String mMethodName;
     private Class<?> mRequestClass;
@@ -28,6 +42,7 @@ public enum ApiMethod {
     private Class<?> mResponseClass;
     private ResponseFormat mResponseFormat = ProjectSettings.API_DEFAULT_RESPONSE_FORMAT;
     private ContentType mContentType = ProjectSettings.API_DEFAULT_CONTENT_TYPE;
+    //private String baseUrl="http://192.168.0.106:4000/api/v1/";
 
     public Class<?> getRequestClass() {
         return mRequestClass;

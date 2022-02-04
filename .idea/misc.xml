@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../../../layout/custom_preview.xml" value="0.5471417965850037" />
+        <entry key="../../../../layout/custom_preview.xml" value="0.29907407407407405" />
+        <entry key="../../Android/Sdk/platforms/android-31/data/res/layout/auto_complete_list.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/selector_buy_button.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/shape_crypto_changed_green.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/drawable/shape_gardient_left.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/drawable/shape_gardient_reight.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/drawable/shape_login_activity_edit_text.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/drawable/shape_markets_view.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/drawable/shape_profile_view.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/drawable/shape_view_line.xml" value="0.11875" />
+        <entry key="app/src/main/res/layout/activity_crypto_stock_detail.xml" value="0.23715277777777777" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.13353825136612021" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.23715277777777777" />
+        <entry key="app/src/main/res/layout/layout_crypto_info_list_item.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/layout_crypto_list_item_details.xml" value="0.1369535519125683" />
+        <entry key="app/src/main/res/layout/layout_get_information.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/layout_item_wallet.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/widget_bottom_tab_view.xml" value="0.10758196721311475" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.23715277777777777" />
+      </ProjectState>
+    </option>
   </component>
 </project>

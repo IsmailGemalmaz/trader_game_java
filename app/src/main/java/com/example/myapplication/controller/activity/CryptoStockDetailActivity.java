@@ -1,39 +1,28 @@
 package com.example.myapplication.controller.activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
 import com.example.myapplication.constant.ApiMethod;
 import com.example.myapplication.constant.CryptoStockItemType;
-import com.example.myapplication.constant.FilterType;
 import com.example.myapplication.controller.base.BaseActivity;
-import com.example.myapplication.controller.base.BaseApiActivity;
 import com.example.myapplication.model.entity.CryptoStock;
-import com.example.myapplication.model.entity.CryptoStockValue;
 import com.example.myapplication.model.request.AddCryptoFavoritesRequest;
-import com.example.myapplication.model.request.GetCryptoStockRequest;
+import com.example.myapplication.model.request.AddCryptoWalletRequest;
 import com.example.myapplication.model.request.GetStockDetailRequest;
 import com.example.myapplication.model.response.BaseResponse;
-import com.example.myapplication.model.response.GetCryptoStockResponse;
 import com.example.myapplication.model.response.GetStockDetailResponse;
-import com.example.myapplication.view.adapter.CryptoDetailAdapter;
+import com.example.myapplication.view.adapter.CryptoFavoritesAdapter;
 import com.example.myapplication.view.layout.CryptoDetailListItemLayout;
 import com.example.myapplication.view.widget.Toast;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -43,6 +32,8 @@ public class CryptoStockDetailActivity extends BaseActivity implements View.OnCl
     private static final String EXTRA_TITLE_ID = getNewExtraId();
     private static final String EXTRA_STOCK_ID = getNewExtraId();
 
+    @BindView(R.id.btnDetailBuy)
+    Button btnDetailBuy;
     @BindView(R.id.ibDetailBack)
     ImageButton ibDetailBack;
     @BindView(R.id.tvCoinName)
@@ -72,7 +63,7 @@ public class CryptoStockDetailActivity extends BaseActivity implements View.OnCl
 
     private String mStockId;
    private boolean mIsServiceAlreadyCalled;
-   private CryptoDetailAdapter mAdapter;
+   private CryptoFavoritesAdapter mAdapter;
    private List <CryptoStock> cryptoStocks;
 
     public static void start(Activity activity,String stockCurrency,String stockİd){
@@ -99,6 +90,7 @@ public class CryptoStockDetailActivity extends BaseActivity implements View.OnCl
         super.assignObjects();
         mTitle=getIntent().getStringExtra(EXTRA_TITLE_ID);
         mStockId=getIntent().getStringExtra(EXTRA_STOCK_ID);
+
     }
 
     @Override
@@ -106,6 +98,8 @@ public class CryptoStockDetailActivity extends BaseActivity implements View.OnCl
         super.setListeners();
         ibDetailBack.setOnClickListener(this);
         ibStockDetailFavorite.setOnClickListener(this);
+        btnDetailBuy.setOnClickListener(this);
+
     }
 
     @Override
@@ -115,6 +109,9 @@ public class CryptoStockDetailActivity extends BaseActivity implements View.OnCl
         }else if(v==ibStockDetailFavorite){
             sendAddCryptoFavoritesRequest();
             Toast.info(context,"Favorilere Eklendi");
+        }else if(v==btnDetailBuy){
+            sendAddCryptoWalletRequest();
+            Toast.info(context,"Satın Alındı");
         }
     }
 
@@ -148,6 +145,12 @@ public class CryptoStockDetailActivity extends BaseActivity implements View.OnCl
         sendRequest(request);
     }
 
+    private void  sendAddCryptoWalletRequest(){
+        AddCryptoWalletRequest request=new AddCryptoWalletRequest();
+        request.setCurrency(mTitle);
+        sendRequest(request);
+    }
+
 
     @NonNull
    private void handleGetStockDetailResponse(GetStockDetailResponse response){
@@ -165,6 +168,6 @@ public class CryptoStockDetailActivity extends BaseActivity implements View.OnCl
 
 
 
-   }
+    }
 
 }

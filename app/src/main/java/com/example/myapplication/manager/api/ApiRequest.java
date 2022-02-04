@@ -2,7 +2,9 @@ package com.example.myapplication.manager.api;
 
 import com.example.myapplication.constant.ApiMethod;
 
-public abstract class ApiRequest {
+import java.io.Serializable;
+
+public abstract class ApiRequest implements Serializable {
     private transient Object mSender;
     private transient boolean mIsShowProgressAllowed;
 

@@ -15,7 +15,6 @@
             android:layout_gravity="center"
             android:adjustViewBounds="true"
             android:src="@drawable/img_app_logo"
-
             />
     </LinearLayout>
 

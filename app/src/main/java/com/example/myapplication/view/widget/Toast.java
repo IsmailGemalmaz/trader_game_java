@@ -18,4 +18,8 @@ public abstract class Toast {
     public static void info(Context context, String message) {
         Toasty.custom(context, message, null, ContextCompat.getColor(context, R.color.green), DEFAULT_DURATION, false, true).show();
     }
+
+    public static void error(Context context, String message) {
+        Toasty.custom(context, message, null, ContextCompat.getColor(context, R.color.red), DEFAULT_DURATION, false, true).show();
+    }
 }

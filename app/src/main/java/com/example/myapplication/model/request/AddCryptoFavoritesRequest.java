@@ -7,7 +7,7 @@ public class AddCryptoFavoritesRequest extends BaseRequest {
     //private String price;
 
     public void setCurrency(String currency) {
-        currency = currency;
+        this.currency = currency;
     }
 
     /*public void setPrice(String price) {

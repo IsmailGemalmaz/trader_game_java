@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -15,13 +16,22 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication.R;
 import com.example.myapplication.constant.ApiMethod;
 import com.example.myapplication.constant.FilterType;
+import com.example.myapplication.controller.EventListener;
+import com.example.myapplication.controller.base.BaseActivity;
+import com.example.myapplication.controller.base.BaseApiActivity;
 import com.example.myapplication.controller.base.BaseFragment;
+import com.example.myapplication.manager.api.ApiListener;
 import com.example.myapplication.model.entity.CryptoStock;
+import com.example.myapplication.model.entity.UserEntity;
+import com.example.myapplication.model.request.AddCryptoFavoritesRequest;
+import com.example.myapplication.model.request.GetCryptoFavoritesRequest;
 import com.example.myapplication.model.request.GetCryptoStockRequest;
 import com.example.myapplication.model.response.BaseResponse;
 import com.example.myapplication.model.response.GetConfigResponse;
 import com.example.myapplication.model.response.GetCryptoStockResponse;
+import com.example.myapplication.utility.L;
 import com.example.myapplication.view.adapter.CryptoInfoAdapter;
+import com.example.myapplication.view.widget.EndlessRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,13 +40,15 @@ import javax.security.auth.callback.Callback;
 
 import butterknife.BindView;
 
-public class    MarketsFragment extends BaseFragment implements View.OnClickListener {
+public class  MarketsFragment extends BaseFragment implements View.OnClickListener, EventListener, ApiListener {
 
 
     @BindView(R.id.rvCryptoİnfo)
-    RecyclerView recyclerView;
+    EndlessRecyclerView recyclerView;
     @BindView(R.id.etSearch)
     EditText etSearch;
+    @BindView(R.id.tvUserName)
+    TextView tvUserName;
 
     private CryptoInfoAdapter mAdapter;
     private List<CryptoStock> mStockList;
@@ -44,7 +56,10 @@ public class    MarketsFragment extends BaseFragment implements View.OnClickList
     private FilterType mFilterType;
     private boolean mIsServiceAlreadyCalled;
     private String mPrevSearchText;
+    private UserEntity mUser;
     private String mSearchText;
+    private BaseApiActivity mActivity;
+
 
     @Override
     public int getLayoutId() {
@@ -57,6 +72,9 @@ public class    MarketsFragment extends BaseFragment implements View.OnClickList
         mStockList=new ArrayList<>();
         mAdapter=new CryptoInfoAdapter(context,mStockList);
         mFilterType=FilterType.ALL;
+        mActivity=(BaseApiActivity) getContext();
+        mUser=mActivity.getApp().getUser();
+
        // setCompaniesRequestInterval();
     }
 
@@ -80,9 +98,9 @@ public class    MarketsFragment extends BaseFragment implements View.OnClickList
 
     @Override
     public void prepareUI() {
-        recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(context, RecyclerView.VERTICAL, false));
         recyclerView.setAdapter(mAdapter);
-
+        tvUserName.setText(mUser.getFirstName()+" "+mUser.getLastName());
     }
 
     @Override
@@ -95,12 +113,14 @@ public class    MarketsFragment extends BaseFragment implements View.OnClickList
     public void onPaused() {
         super.onPaused();
         //mSendGetStocksRequestHandler.removeMessages(0);
+
     }
 
     @Override
     public void onLayoutReady() {
         super.onLayoutReady();
         sendGetStocksRequest();
+
     }
 
     @Override
@@ -124,6 +144,8 @@ public class    MarketsFragment extends BaseFragment implements View.OnClickList
         sendRequest(request,true);
     }
 
+
+
     private void handleGetStocksResponse(GetCryptoStockResponse response) {
         List<CryptoStock> stocks = response.getStocks();
         if (stocks != null) {
@@ -133,6 +155,13 @@ public class    MarketsFragment extends BaseFragment implements View.OnClickList
             mAdapter.notifyDataSetChanged();
         }
 
+    }
+
+
+    public  void  sendAddCryptoFavoritesRequest(){
+        AddCryptoFavoritesRequest request=new AddCryptoFavoritesRequest();
+        request.setCurrency("bitcoin");
+        sendRequest(request);
     }
 
     private void setCompaniesRequestInterval() {
